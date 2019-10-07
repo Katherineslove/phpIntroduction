@@ -5,7 +5,7 @@
         <title></title>
     </head>
     <body>
-        <h1>Home Page</h1>
+        <h1>Contact Page</h1>
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="Contact.php">Contact</a></li>
