@@ -6,10 +6,6 @@
     </head>
     <body>
         <h1>Home Page</h1>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="Contact.php">Contact</a></li>
-            <li><a href="About.php">About</a></li>
-        </ul>
+        <?php include('templates/navigation.php') ?>
     </body>
 </html>
