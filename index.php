@@ -53,7 +53,78 @@
 
   // die($string);
 
-  $favouriteColours = array();
+  $favouriteColours = array(
+    "Simon" => "green",
+    "Brayden" => "purple",
+    "Ryley" => "red"
+  );
+
+  echo "<br>";
+
+  foreach ($favouriteColours as $person => $value) {
+    echo "<br>";
+    echo $person . "\"s favourite colour is ". $value;
+  }
+
+  $class = array(
+    "Simon" => array(
+      "age" => 19,
+      "colour" => "green",
+      "food" => "Sushi",
+      "town" => "Ngaio",
+      "fullLicence" => false
+    ),
+    "Brayden" => array(
+      "age" => 21,
+      "colour" => "purple",
+      "food" => "Sushi",
+      "town" => "Brown Owl",
+      "fullLicence" => true
+    ),
+    "Ryley" => array(
+      "age" => 19,
+      "colour" => "red",
+      "food" => "Garlic Bread",
+      "town" => "Tawa",
+      "fullLicence" => false
+    ),
+    "Andy" => array(
+      "age" => 26,
+      "colour" => "blue",
+      "food" => "Fish tacos",
+      "town" => "Lower Hutt",
+      "fullLicence" => false
+    ),
+    "Katherine" => array(
+      "age" => 18,
+      "colour" => "Purple",
+      "food" => "Pizza",
+      "town" => "Tawa",
+      "fullLicence" => true
+    ),
+    "Larissa" => array(
+      "age" => 19,
+      "colour" => "green",
+      "food" => "food",
+      "town" => "wadestown",
+      "fullLicence" => false
+    ),
+    "Sophie" => array(
+      "age" => 32,
+      "colour" => "peach",
+      "food" => "avocado",
+      "town" => "paraparaumu",
+      "fullLicence" => true
+    ),
+    "Annie" => array(
+      "age" => 17,
+      "colour" => "blue",
+      "food" => "pizza",
+      "town" => "Taita",
+      "fullLicence" => false
+    )
+  );
+
 ?>
 
 <!DOCTYPE html>
@@ -72,5 +143,24 @@
      <h3>Our Null Variable Is:     </h3> <?php echo $null; ?>
 
      <h3>A Value In My Array Is:     </h3> <?php echo $array[0]; ?> -->
+
+     <?php
+       /*foreach ($class as $classMember => $details) {
+         echo "<div>";
+            echo "<h3>".$classMember."</h3>";
+            echo "<p>".$details["age"]." years old </p>";
+         echo "</div>";
+       }*/
+     ?>
+
+     <?php foreach ($class as $classMember => $details) { ?>
+        <div class="">
+          <h3><?php echo $classMember; ?></h3>
+          <p><?php echo $details["age"]; ?> years old</p>
+          <p>Their favourite food is <?php echo $details["food"]; ?></p>
+          <p>They live in <?php echo $details["town"]; ?></p>
+        </div>
+     <?php } ?>
+
   </body>
 </html>
