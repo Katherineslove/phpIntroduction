@@ -32,28 +32,28 @@
 
   // var_dump($array);
   // print_r($array);
-  echo "<pre>";
-    print_r($array);
-  echo "</pre>";
+  // echo "<pre>";
+  //   print_r($array);
+  // echo "</pre>";
 
   //If statements
-  if($boolean === true){
-    echo "the boolean is true";
-    echo "<br>";
-  } else {
-    echo "the boolean is false";
-    echo "<br>";
-  }
+  // if($boolean === true){
+  //   echo "the boolean is true";
+  //   echo "<br>";
+  // } else {
+  //   echo "the boolean is false";
+  //   echo "<br>";
+  // }
 
   //Loops
-  for ($i=0; $i < count($array); $i++) {
-    echo "<br>";
-    echo $array[$i];
-  }
+  // for ($i=0; $i < count($array); $i++) {
+  //   echo "<br>";
+  //   echo $array[$i];
+  // }
 
   // die($string);
 
-  $favouriteColours = array(
+  /*$favouriteColours = array(
     "Simon" => "green",
     "Brayden" => "purple",
     "Ryley" => "red"
@@ -64,33 +64,33 @@
   foreach ($favouriteColours as $person => $value) {
     echo "<br>";
     echo $person . "\"s favourite colour is ". $value;
-  }
+  }*/
 
   $class = array(
     "Simon" => array(
       "age" => 19,
-      "colour" => "green",
+      "colour" => "Green",
       "food" => "Sushi",
       "town" => "Ngaio",
       "fullLicence" => false
     ),
     "Brayden" => array(
       "age" => 21,
-      "colour" => "purple",
+      "colour" => "Purple",
       "food" => "Sushi",
       "town" => "Brown Owl",
       "fullLicence" => true
     ),
     "Ryley" => array(
       "age" => 19,
-      "colour" => "red",
+      "colour" => "Red",
       "food" => "Garlic Bread",
       "town" => "Tawa",
       "fullLicence" => false
     ),
     "Andy" => array(
       "age" => 26,
-      "colour" => "blue",
+      "colour" => "Blue",
       "food" => "Fish tacos",
       "town" => "Lower Hutt",
       "fullLicence" => false
@@ -104,22 +104,22 @@
     ),
     "Larissa" => array(
       "age" => 19,
-      "colour" => "green",
-      "food" => "food",
-      "town" => "wadestown",
+      "colour" => "Green",
+      "food" => "Food",
+      "town" => "Wadestown",
       "fullLicence" => false
     ),
     "Sophie" => array(
       "age" => 32,
-      "colour" => "peach",
-      "food" => "avocado",
-      "town" => "paraparaumu",
+      "colour" => "Peach",
+      "food" => "Avocado",
+      "town" => "Paraparaumu",
       "fullLicence" => true
     ),
     "Annie" => array(
       "age" => 17,
-      "colour" => "blue",
-      "food" => "pizza",
+      "colour" => "Blue",
+      "food" => "Pizza",
       "town" => "Taita",
       "fullLicence" => false
     )
@@ -153,14 +153,24 @@
        }*/
      ?>
 
-     <?php foreach ($class as $classMember => $details) { ?>
+     <?php foreach ($class as $classMember => $details): ?>
+
         <div class="">
-          <h3><?php echo $classMember; ?></h3>
-          <p><?php echo $details["age"]; ?> years old</p>
-          <p>Their favourite food is <?php echo $details["food"]; ?></p>
-          <p>They live in <?php echo $details["town"]; ?></p>
+            <h3><?php echo $classMember; ?></h3>
+            <p><?php echo $details["age"]; ?> years old</p>
+            <p>Their favourite food is <?php echo $details["food"]; ?></p>
+            <p>They live in <?php echo $details["town"]; ?></p>
+
+            <?php if ($details["fullLicence"] === true): ?>
+                <p>They have their full licence</p>
+            <?php else: ?>
+                <p>They do not have their full licence</p>
+            <?php endif; ?>
+            <hr>
+
         </div>
-     <?php } ?>
+
+     <?php endforeach; ?>
 
   </body>
 </html>
