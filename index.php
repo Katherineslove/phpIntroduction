@@ -52,6 +52,8 @@
   }
 
   // die($string);
+
+  $favouriteColours = array();
 ?>
 
 <!DOCTYPE html>
