@@ -2,7 +2,7 @@
   //phpinfo();
 
   //Strings
-  $string = 'Goodmorning';
+  $string = "Goodmorning";
 
   //Integers
   $integer = 2;
@@ -14,13 +14,13 @@
   $boolean = false;
 
   //Arrays
-  $array = array('item 1', 'item 2', 'item 3');
+  $array = array("item 1", "item 2", "item 3");
 
   //Objects
   class Me {
     function Me(){
-      $this->name = 'Katherine';
-      $this->gender = 'Female';
+      $this->name = "Katherine";
+      $this->gender = "Female";
     }
   }
 
@@ -28,13 +28,28 @@
 
   $null = null;
 
-  define('SITETITLE', 'This is a constant variable');
+  define("SITETITLE", "This is a constant variable");
 
   // var_dump($array);
   // print_r($array);
-  echo '<pre>';
+  echo "<pre>";
     print_r($array);
-  echo '</pre>';
+  echo "</pre>";
+
+  //If statements
+  if($boolean === true){
+    echo "the boolean is true";
+    echo "<br>";
+  } else {
+    echo "the boolean is false";
+    echo "<br>";
+  }
+
+  //Loops
+  for ($i=0; $i < count($array); $i++) {
+    echo "<br>";
+    echo $array[$i];
+  }
 
   // die($string);
 ?>
@@ -43,10 +58,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title><?php echo 'this is the page title' ?></title>
+    <title><?php echo "PHP Introduction" ?></title>
   </head>
   <body>
-     <h3>Our String Variable Is:   </h3> <?php echo $string; ?>
+     <!-- <h3>Our String Variable Is:   </h3> <?php echo $string; ?>
      <h3>Our Integer Variable Is:  </h3> <?php echo $integer; ?>
      <h3>Our Float Variable Is:    </h3> <?php echo $float; ?>
      <h3>A Object Value Is:        </h3> <?php echo $myself->name; ?>
@@ -54,7 +69,6 @@
      <h3>Our Boolean Variable Is:  </h3> <?php echo $boolean; ?>
      <h3>Our Null Variable Is:     </h3> <?php echo $null; ?>
 
-
-     <h3>A Value In My Array Is:     </h3> <?php echo $array[0]; ?>
+     <h3>A Value In My Array Is:     </h3> <?php echo $array[0]; ?> -->
   </body>
 </html>
